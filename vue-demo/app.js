@@ -95,27 +95,27 @@
 //     },
 // });
 
-var app20 = new Vue({
-    el: '#app20',
-    data: {
-        firstName: 'Hello',
-        lastName: 'Demo',
-        fullName: 'Hello Demo'
-    },
-    // computed: {
-    //     fullName: function(){
-    //         return this.firstName + ' ' + this.lastName;
-    //     }
-    // }
-    watch: {
-        firstName: function(val){
-            this.fullName = val + ' ' + this.lastName
-        },
-        lastName: function(val){
-            this.fullName = this.firstName + ' ' + val
-        }
-    }
-});
+// var app20 = new Vue({
+//     el: '#app20',
+//     data: {
+//         firstName: 'Hello',
+//         lastName: 'Demo',
+//         fullName: 'Hello Demo'
+//     },
+//     // computed: {
+//     //     fullName: function(){
+//     //         return this.firstName + ' ' + this.lastName;
+//     //     }
+//     // }
+//     watch: {
+//         firstName: function(val){
+//             this.fullName = val + ' ' + this.lastName
+//         },
+//         lastName: function(val){
+//             this.fullName = this.firstName + ' ' + val
+//         }
+//     }
+// });
 
 // var app21 = new Vue({
 //     el: '#app21',
@@ -137,5 +137,38 @@ var app20 = new Vue({
 //     }
 // })
 
-
+// var app22 = new Vue({
+//     el: '#app22',
+//     data: {
+//         question: '',
+//         answer: 'I cannot give you an answer until you ask a question!'
+//     },
+//     watch: {
+//         question: function(newValue, oldValue){
+//             this.answer = 'Waiting for you to stop typing...'
+//             this.getAnswer()
+//         }
+//     },
+//     methods: {
+//         getAnswer: _.debounce(
+//             function () {
+//               if (this.question.indexOf('?') === -1) {
+//                 this.answer = 'Questions usually contain a question mark. ;-)'
+//                 return
+//               }
+//               this.answer = 'Thinking...'
+//               var vm = this
+//               axios.get('https://yesno.wtf/api')
+//                 .then(function (response) {
+//                   vm.answer = _.capitalize(response.data.answer)
+//                 })
+//                 .catch(function (error) {
+//                   vm.answer = 'Error! Could not reach the API. ' + error
+//                 })
+//             },
+//             // 这是我们为判定用户停止输入等待的毫秒数
+//             500
+//         )
+//     }
+// })
 
