@@ -1,8 +1,53 @@
-// var app6 = new Vue({
-//     el: '#app6',
+// var app1 = new Vue({
+//     el: '#app1',
 //     data: {
-//         message: 'Hello Vue'
+//       message: 'Vue Demo'
 //     }
+// });
+
+// var app2 = new Vue({
+//     el: '#app2',
+//     data: {
+//       message: '页面加载于' + new Date().toLocaleString()
+//     }
+// });
+
+// var app3 = new Vue({
+//   el: '#app3',
+//   data: {
+//     seen: true,
+//     message: '显示与隐藏'
+//   }
+// });
+
+// var app4 = new Vue({
+//   el: '#app4',
+//   data: {
+//     todos: [
+//       {text: 'list1'},
+//       {text: 'list2'},
+//       {text: 'list3'}
+//     ]
+//   }
+// });
+
+// var app5 = new Vue({
+//   el: '#app5',
+//   data: {
+//     message: 'reverse message'
+//   },
+//   methods: {
+//     reverseMessage: function() {
+//       this.message = this.message.split(' ').reverse().join(' ');
+//     }
+//   }
+// })
+
+// var app6 = new Vue({
+//   el: '#app6',
+//   data: {
+//     message: 'hello demo'
+//   }
 // })
 
 // Vue.component('todo-item', {
@@ -70,6 +115,77 @@
 //         console.log('destroyed', this.message);
 //     }
 // });
+
+// var app12 = new Vue({
+//     el: '#app12',
+//     data: {
+//       message: 'hello demo'
+//     }
+//   })
+  
+//   var app13 = new Vue({
+//     el: '#app13',
+//     data: {
+//       message: 'hello demo'
+//     }
+//   })
+  
+//   var app14 = new Vue({
+//     el: '#app14',
+//     data: {
+//       isButtonDisabled: 0
+//     }
+//   })
+  
+//   var app = new Vue({
+//     el: '#app15',
+//     data: {
+//       seen: true
+//     }
+//   })
+  
+//   var app16 = new Vue({
+//     el: '#app16',
+//     data: {
+//       message: 'Vue Demo'
+//     },
+//     beforeCreate: function(){
+//       console.log("beforeCreated", this.message);
+//     },
+//     created: function(){
+//       console.log("created", this.message);
+//     },
+//     beforeMount: function(){
+//       console.log("beforeMount", this.message);
+//     },
+//     mounted: function(){
+//       console.log("mounted", this.message);
+//     },
+//     beforeUpdate: function(){
+//       console.log("beforeUpdated", this.message);
+//     },
+//     updated: function(){
+//       console.log("updated", this.message);
+//     },
+//     beforeDestroy: function(){
+//       console.log("updated", this.message);
+//     },
+//     destroyed: function(){
+//       console.log("updated", this.message);
+//     },
+//     computed: {
+//       reversedMessage: function(){
+//         console.log("computed", this.message);
+//         return this.message.split(' ').reverse().join(' ');
+//       }
+//     },
+//     methods: {
+//       reverseMessage: function() {
+//         console.log("clicked", this.message);
+//         this.message = this.message.split(' ').reverse().join(' ');
+//       }
+//     }
+//   })
 
 // var app19 = new Vue({
 //     el: '#app19',
