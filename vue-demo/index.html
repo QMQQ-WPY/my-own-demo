@@ -118,6 +118,95 @@
         <p>{{ answer }}</p>
     </div> -->
 
+    <!-- <div id="app23" class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">
+        这是啥？
+    </div> -->
+
+    <!-- <div id="app24">
+        <p v-bind:class="classObject">用computed控制class</p>
+    </div> -->
+
+    <!-- <div id="app25">
+        <p v-bind:class="[activeClass, errorClass]">class1</p>
+        <p v-bind:class="[isActive ? activeClass : '', errorClass]">class2</p>
+        <p v-bind:class="[{ active: isActive }, errorClass]">class3</p>
+    </div> -->
+
+    <!-- 渲染不符合预期，待确认具体原因 -->
+    <!-- <div id="app26">
+        <div v-bind:style="{font-size: font-size + 'px'}">样式控制1</div>
+        <div v-bind:style="styleObject">样式控制2</div>
+    </div> -->
+
+    <!-- <div id="app27">
+        <h1 v-show="ok">用show控制是否显示</h1>
+        <h1 v-if="ok">Yes</h1>
+        <h1 v-else>No</h1>
+        <template v-if="ok">
+            <h1>Title</h1>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+        </template>
+        <div v-if="Math.random()>0.5">
+            <p>v-if可见</p>
+        </div>
+        <div v-else>
+            <p>v-else可见</p>
+        </div>
+        <div v-if="type === 'A'">
+            <p>A可见</p>
+        </div>
+        <div v-else-if="type === 'B'">
+            <p>B可见</p>
+        </div>
+        <div v-else-if="type === 'C'">
+            <p>C可见</p>
+        </div>
+        <div v-else>
+            <p>A and B and C不可见</p>
+        </div>
+        <div>
+            <div>三种登录方式：
+                <button  v-on:click="loginByUsername">用户名</button>
+                <button  v-on:click="loginByPhone">手机号</button>
+                <button  v-on:click="loginByEmail">邮箱</button>
+            </div>
+        </div>
+        <template v-if="loginType === 'username'">
+            <label>Username</label>
+            <input placeholder="Enter your username" key="username-input">
+        </template>
+        <template v-else-if="loginType === 'phone'">
+            <label>Phone</label>
+            <input placeholder="Enter your phone" key="phone-input">
+        </template>
+        <template v-else>
+            <label>Email</label>
+            <input placeholder="Enter your email address" key="email-input">
+        </template>
+    </div> -->
+
+    <div id="app28">
+        <ul>
+            <li v-for="item in messages">{{ item.message }}</li>
+        </ul>
+        <ul>
+            <li v-for="(item, index) in messages" v-bind:key="item.id">{{ index }}-{{ item.message }}</li>
+        </ul>
+        <ul>
+            <li v-for="item of messages" v-bind:key="item.id">{{ item.message }}</li>
+        </ul>
+        <ul>
+            <li v-for="(item, index) of messages" v-bind:key="item.id">{{ index }}--{{ item.message }}</li>
+        </ul>
+        <ul>
+            <li v-for="value of messagesObject" v-bind:key="value">{{ value }}</li>
+        </ul>
+        <ul>
+            <li v-for="(value, key, index) of messagesObject" v-bind:key="index">{{ key }}--{{value}}-{{index}}</li>
+        </ul>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>

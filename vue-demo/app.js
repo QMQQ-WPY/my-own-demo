@@ -288,3 +288,83 @@
 //     }
 // })
 
+// var app23 = new Vue({
+//     el: '#app23',
+//     data: {
+//         isActive: false,
+//         hasError: true
+//     }
+// })
+
+// var app24 = new Vue({
+//     el: '#app24',
+//     data: {
+//         isActive: false,
+//         error: {
+//             type: 'fatal'
+//         }
+//     },
+//     computed: {
+//         classObject: function(){
+//             return {
+//                 active: this.isActive && !this.error,
+//                 'text-danger': this.error && this.error.type === 'fatal'
+//             }
+//         }
+//     }
+// })
+
+// var app25 = new Vue({
+//     el: '#app25',
+//     data: {
+//         isActive: true,
+//         activeClass: 'active',
+//         errorClass: 'text-danger'
+//     }
+// })
+
+// var app26 = new Vue({
+//     el: '#app26',
+//     data: {
+//         'font-size': 14,
+//         styleObject: {
+//             'font-size': 16,
+//         }
+//     },
+// })
+
+// var app27 = new Vue({
+//     el: '#app27',
+//     data: {
+//         ok: false,
+//         type: 'D',
+//         loginType: ''
+//     },
+//     methods: {
+//         loginByUsername: function(){
+//             this.loginType = 'username'
+//         },
+//         loginByPhone: function(){
+//             this.loginType = 'phone'
+//         },
+//         loginByEmail: function(){
+//             this.loginType = ''
+//         }
+//     }
+// })
+
+var app28 = new Vue({
+    el: '#app28',
+    data: {
+        messages: [
+            {message: 'Foo', id: 1},
+            {message: 'Bar', id: 2}
+        ],
+        messagesObject: {
+            firstName: 'John',
+            lastName: 'Doe',
+            age: 30
+        }
+    }
+})
+
