@@ -186,7 +186,7 @@
         </template>
     </div> -->
 
-    <div id="app28">
+    <!-- <div id="app28">
         <ul>
             <li v-for="item in messages">{{ item.message }}</li>
         </ul>
@@ -205,6 +205,72 @@
         <ul>
             <li v-for="(value, key, index) of messagesObject" v-bind:key="index">{{ key }}--{{value}}-{{index}}</li>
         </ul>
+    </div> -->
+
+    <!-- <div id="app29">
+        <ul>
+            <li v-for="item in messages">{{ item.message }}</li>
+        </ul>
+        <p>改变数组自身得到方法</p>
+        <button v-on:click="changeHandler('push')">push</button>
+        <button v-on:click="changeHandler('pop')">pop</button>
+        <button v-on:click="changeHandler('unshift')">unshift</button>
+        <button v-on:click="changeHandler('shift')">shift</button>
+        <button v-on:click="changeHandler('splice-delete')">splice-delete</button>
+        <button v-on:click="changeHandler('splice-replace')">splice-replace</button>
+        <button v-on:click="changeHandler('reverse')">reverse</button>
+        <button v-on:click="changeHandler('sort')">sort</button>
+        <p>不改变数组自身得到方法</p>
+        <button v-on:click="changeHandler('filter')">filter</button>
+        <button v-on:click="changeHandler('concat')">concat</button>
+        <button v-on:click="changeHandler('slice')">slice</button>
+        <p>非响应式的数组方法</p>
+        <button v-on:click="changeHandler('change-length')">change-length</button>
+        <button v-on:click="changeHandler('change-item')">change-item</button>
+        <button v-on:click="changeHandler('set-item')">set-item</button>
+        <p>全局方法：{{messagesObject.name}}</p>
+    </div> -->
+
+    <!-- <div id="app30">
+        <ul>
+            <li v-for="n in evenNumbers">{{ n }}</li>
+        </ul>
+        <ul>
+            <li v-for="n in odd(numbers)">{{ n }}</li>
+        </ul>
+        <span v-for="n in 10">{{ n }}</span>
+        <ul>
+            <template v-for="item in evenNumbers">
+               <li>{{ item }}</li>
+               <li class="divider"></li>
+            </template>
+        </ul>
+        <ul>
+            <li v-for="n in numbers" v-if="n%2===0">
+                {{ n }}
+            </li>
+        </ul>
+        <ul v-if="numbers.length">
+            <li v-for="n in numbers">
+                {{ n }}
+            </li>
+        </ul>
+        <p v-else>No todos left!</p>
+    </div> -->
+
+    <!-- // 组件的实现不是太清楚，稍后再看
+    <div id="app31">
+        <input v-model="newTodoText" v-on:keyup.enter="addNewTodo" placeholder="Add a todo">
+        <ul>
+            <li is="todo-item" v-for="(todo, index) in todos" v-bind:key="todo.id" v-bind:title="todo.title" v-on:remove="todos.splice(index, 1)"></li>
+        </ul>
+    </div> -->
+
+    <div id="app32">
+        <button v-on:click="counter+=1">点我</button>
+        <p>总共被点了{{ counter }}次</p>
+        <button v-on:click="greet">我想对你说</button>
+        <button v-on:click="warn('Form cannot be submitted yet.', $event)">提交表单</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

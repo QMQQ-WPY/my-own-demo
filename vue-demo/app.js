@@ -122,28 +122,28 @@
 //       message: 'hello demo'
 //     }
 //   })
-  
+
 //   var app13 = new Vue({
 //     el: '#app13',
 //     data: {
 //       message: 'hello demo'
 //     }
 //   })
-  
+
 //   var app14 = new Vue({
 //     el: '#app14',
 //     data: {
 //       isButtonDisabled: 0
 //     }
 //   })
-  
+
 //   var app = new Vue({
 //     el: '#app15',
 //     data: {
 //       seen: true
 //     }
 //   })
-  
+
 //   var app16 = new Vue({
 //     el: '#app16',
 //     data: {
@@ -353,17 +353,148 @@
 //     }
 // })
 
-var app28 = new Vue({
-    el: '#app28',
+// var app28 = new Vue({
+//     el: '#app28',
+//     data: {
+//         messages: [
+//             {message: 'Foo', id: 1},
+//             {message: 'Bar', id: 2}
+//         ],
+//         messagesObject: {
+//             firstName: 'John',
+//             lastName: 'Doe',
+//             age: 30
+//         }
+//     }
+// })
+
+// var app29 = new Vue({
+//     el: '#app29',
+//     data: {
+//         messages: [
+//             { message: 'vue-1', id: 1 },
+//             { message: 'vue-2', id: 2 },
+//             { message: 'vue-3', id: 3 },
+//             { message: 'vue-4', id: 4 }
+//         ],
+//         messagesObject: {
+//             firstName: 'John',
+//             lastName: 'Doe',
+//             age: 30
+//         }
+//     },
+//     methods: {
+//         changeHandler: function(type){
+//             switch(type){
+//                 case 'push': this.messages.push({message: `vue-${this.messages.length+1}`, id: this.messages.length+1});break;
+//                 case 'pop': this.messages.pop();break;
+//                 case 'unshift': this.messages.unshift({message: `vue-${this.messages.length+1}`, id: this.messages.length+1});break;
+//                 case 'shift': this.messages.shift();break;
+//                 case 'reverse': this.messages.reverse();break;
+//                 // splice的预期结果与实际情况不符，待确认原因
+//                 case 'splice-delete': this.messages.splice(this.messages.length);
+//                 case 'splice-replace': this.messages.splice(1,0, {message: `vue-${this.messages.length+1}`, id: this.messages.length+1});
+//                 case 'sort': this.messages.sort((a, b)=>{
+//                     return a.id < b.id;
+//                 });break;
+//                 case 'filter': this.messages = this.messages.filter((item)=>{return item.id>3});break;
+//                 case 'concat': this.messages = this.messages.concat([{message: `vue-${this.messages.length+1}`, id: `${this.messages.length+1}`}, {message: `vue-${this.messages.length+2}`, id: `${this.messages.length+2}`}]);break;
+//                 case 'slice': this.messages = this.messages.slice(2);
+//                 case 'change-length': this.messages.length = 10;break;
+//                 case 'change-item': this.messages[0] = {message: 'vue', id: -1};break;
+//                 case 'set-item': this.messagesObject = Object.assign({}, this.messagesObject, {name: 'hahha'});break;
+//                 default: break;
+//             }
+//         }
+//     }
+// });
+// //非响应式写法：
+// // app29.messagesObject.name = 'Good';
+// //响应式写法，改变数组的全局方法：$set
+// // app29.$set(app29.messagesObject, name, 'Great');
+
+// var app30 = new Vue({
+//     el: '#app30',
+//     data: {
+//         numbers: [1, 2, 3, 4, 5, 6]
+//     },
+//     computed: {
+//         evenNumbers: function () {
+//             return this.numbers.filter(function (number) {
+//                 return number % 2 === 0
+//             })
+//         }
+//     },
+//     methods: {
+//         odd: function(numbers){
+//             return numbers.filter(function(number){
+//                 return !(number%2 === 0);
+//             })
+//         }
+//     }
+// })
+
+// Vue.component('todo-item', {
+//     template: '\
+//       <li>\
+//         {{ title }}\
+//         <button v-on:click="$emit(\'remove\')">X</button>\
+//       </li>\
+//     ',
+//     props: ['title']
+// })
+
+// var app31 = new Vue({
+//     el: '#app31',
+//     data: {
+//         newTodoText: '',
+//         todos: [
+//             {
+//                 id: 1,
+//                 title: 'Do the dishes',
+//             },
+//             {
+//                 id: 2,
+//                 title: 'Take out the trash',
+//             },
+//             {
+//                 id: 3,
+//                 title: 'Mow the lawn'
+//             }
+//         ],
+//         nextTodoId: 4
+//     },
+//     methods: {
+//         addNewTodo: function () {
+//             this.todos.push({
+//                 id: this.nextTodoId++,
+//                 title: this.newTodoText
+//             })
+//             this.newTodoText = ''
+//         }
+//     }
+// })
+
+var app32 = new Vue({
+    el: '#app32',
     data: {
-        messages: [
-            {message: 'Foo', id: 1},
-            {message: 'Bar', id: 2}
-        ],
-        messagesObject: {
-            firstName: 'John',
-            lastName: 'Doe',
-            age: 30
+        counter: 0,
+        name: 'Vue Demo'
+    },
+    methods: {
+        greet: function(e){
+            console.log(e);
+            alert('Hello '+this.name+' !');
+            if(e){
+                alert(e.target.tagName);
+            }
+        },
+        warn: function(message, event) {
+            alert(message);
+            console.log(event);
+            if(event){
+                alert(event.target.tagName);
+            }
         }
     }
 })
